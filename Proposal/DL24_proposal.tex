@@ -1,0 +1,81 @@
+\documentclass[conference]{IEEEtran}
+\IEEEoverridecommandlockouts
+% The preceding line is only needed to identify funding in the first footnote. If that is unneeded, please comment it out.
+\usepackage{cite}
+\usepackage{amsmath,amssymb,amsfonts}
+\usepackage{algorithmic}
+\usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage{xcolor}
+\def\BibTeX{{\rm B\kern-.05em{\sc i\kern-.025em b}\kern-.08em
+    T\kern-.1667em\lower.7ex\hbox{E}\kern-.125emX}}
+\begin{document}
+
+\title{
+YZV303(2)E/BLG561E  Deep Learning \\ 
+Project Proposal\\
+Bridging Silence: A CNN-Based Approach to Sign Language Recognition
+}
+
+\author{\IEEEauthorblockN{Umut Çalıkkasap}
+\IEEEauthorblockA{\textit{Artificial Intelligence and Data Engineering Department} \\
+\textit{Istanbul Technical University}\\
+calikkasap21@itu.edu.tr \\
+Student No: 150210721}
+\and
+\IEEEauthorblockN{Student Name Surname}
+\IEEEauthorblockA{\textit{dept. name of organization (of Aff.)} \\
+\textit{name of organization (of Aff.)}\\
+e-Mail Address\\ Student No}
+}
+
+\maketitle
+\vspace{-1cm}
+
+\section{Project Description}
+This project aims to develop a robust deep learning framework for recognizing and classifying static hand gestures in sign language. The goal is to facilitate communication for hearing-impaired individuals by leveraging image recognition models trained on a custom dataset of hand gesture images collected during sign language training sessions at ITU.\\
+In celebration of ITU's 251st year, this project contributes to creating an inclusive campus experience, aligning with the values of accessibility and equality.
+
+
+\section{Problem Definition}
+Sign language recognition remains a challenging task due to the variability in hand shapes, angles, and lighting conditions. The project seeks to address these challenges by building a classification model that accurately identifies static gestures commonly used in daily communication. The problem can be formally defined as follows: given an image of a hand gesture, the model must predict the corresponding sign language label.
+
+\section{Dataset}
+The dataset will consist of static images of hand gestures taken from ITU students during sign language training organized by the ITU Volunteer Club. Each image will represent a specific gesture from the Turkish Sign Language (TSL). 
+
+\subsection{Specifications}
+To ensure diversity, the dataset will include hand gesture images collected from Kaggle and other publicly available platforms. These external sources will complement the custom-collected dataset to create a more comprehensive and varied dataset. Pre-processing and augmentation techniques, such as rotation, flipping, and scaling, will be applied to enhance robustness. Image resolution should be pre-processed.
+
+\subsection{Data Collection Process}
+Photos will be captured in controlled indoor environments with consistent lighting to minimize noise. After collection:
+\begin{itemize}
+    \item Duplicate images will be removed.
+    \item Images will be normalized for consistent pixel intensity distribution.
+    \item Augmentation will artificially expand the dataset for robustness.
+\end{itemize}
+External datasets will also undergo pre-processing to align them with the format of the custom dataset. The combined dataset will ensure KVKK compliance and avoid personal data collection.
+
+\section{Methodology}
+\subsection{Models}
+The project will employ Convolutional Neural Networks (CNNs) for feature extraction and classification:
+\begin{itemize}
+    \item \textbf{LeNet-5}: A lightweight CNN architecture suitable for foundational image recognition tasks.
+    \item \textbf{AlexNet}: A deeper network known for its performance on moderately complex datasets.
+    \item \textbf{VGG-16}: A versatile architecture for achieving high accuracy in image classification.
+\end{itemize}
+
+\subsection{Training Strategy}
+Models will be implemented using PyTorch, trained on cross-entropy loss, and optimized with SGD or ADAM etc. optimizer. Experiments will include varying learning rates and batch sizes to identify the optimal training configuration. Evaluation metrics will include accuracy, precision, recall, and F1-score.
+
+
+% You can use 'printbibliography' with a ref.bib file
+% \printbibliography
+
+
+\begin{thebibliography}{00}
+\bibitem{b1} G. Eason, B. Noble, and I. N. Sneddon, ``On certain integrals of Lipschitz-Hankel type involving products of Bessel functions,'' Phil. Trans. Roy. Soc. London, vol. A247, pp. 529--551, April 1955.
+\bibitem{b2} J. Clerk Maxwell, A Treatise on Electricity and Magnetism, 3rd ed., vol. 2. Oxford: Clarendon, 1892, pp.68--73.
+\end{thebibliography}
+
+
+\end{document}
